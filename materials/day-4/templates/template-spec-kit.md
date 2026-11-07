@@ -74,7 +74,7 @@ Who is affected? What pain? Why now?
 ## Handoff checklist
 
 - [ ] Problem & success metrics agreed with stakeholder
-- [ ] Out-of-scope reviewed by Sales / Success
+- [ ] Out-of-scope reviewed by Product / Support
 - [ ] Open questions assigned owners
 - [ ] Ready for refinement / technical spike
 

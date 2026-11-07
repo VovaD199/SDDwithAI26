@@ -44,7 +44,7 @@ From the structured spec above, list edge and exception cases relevant to refine
 
 Requirements:
 1. Minimum 8 items; maximum 15.
-2. Categories: eligibility, timing, billing, support override, data/account state, compliance.
+2. Categories: validation, timing, data/state, privacy, notifications, localization.
 3. For each edge case: trigger, expected behavior IF spec is silent say "Spec silent — question Q-##".
 4. Do not propose technical implementation.
 
@@ -60,10 +60,10 @@ Output format:
 From the structured spec above, draft stakeholder clarification questions for a 30-minute review.
 
 Requirements:
-1. Audience tags: Sales, Legal, Billing, Support, Marketing (pick relevant).
+1. Audience tags: Product, Legal, Support, Marketing (pick relevant).
 2. Prioritize Blocker vs Important vs Nice-to-know.
 3. Each question references spec IDs it resolves.
-4. Include 2 "challenge questions" that test whether scope is too large for Q3.
+4. Include 2 "challenge questions" that test whether scope is too large for the next release.
 
 Output format:
 | Priority | Audience | Question | Resolves IDs |
@@ -134,6 +134,6 @@ Before accepting AI output into backlog:
 
 ## Weak vs strong example
 
-**Weak:** "Write acceptance criteria for subscription pause."
+**Weak:** "Write acceptance criteria for the contact form change."
 
 **Strong:** Shared guardrail + Prompt A + full structured spec with RULE and OUT sections filled.

@@ -8,8 +8,8 @@ Use **modules** or **packages** with IDs. Each block should stand alone for trac
 
 | Field | Value |
 |-------|-------|
-| Package ID | PKG-SUB-PAUSE-001 |
-| Capability | Subscription lifecycle |
+| Package ID | PKG-CONTACT-001 |
+| Capability | Contact form |
 | Status | Discovery |
 | Owner | |
 
@@ -51,10 +51,10 @@ Use **modules** or **packages** with IDs. Each block should stand alone for trac
 sequenceDiagram
   participant User
   participant Portal
-  participant Billing
-  User->>Portal: Request pause
-  Portal->>Billing: Validate eligibility
-  Billing-->>Portal: Approved / denied
+  participant Email
+  User->>Portal: Submit contact form
+  Portal->>Email: Send notification
+  Email-->>Portal: Sent / failed
   Portal-->>User: Confirmation
 ```
 
@@ -98,4 +98,4 @@ sequenceDiagram
 
 ---
 
-**Reflection:** Which module surfaced **billing** or **Sales promise** gaps first? Could a designer read Module 3 only and still align?
+**Reflection:** Which module surfaced **data-retention** or **stakeholder promise** gaps first? Could a designer read Module 3 only and still align?

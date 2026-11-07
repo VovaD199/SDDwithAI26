@@ -1,7 +1,7 @@
 # Template A — Plain BA story pack
 
-**Request ID:** REQ-PAUSE-001  
-**Source:** VP Customer Success email  
+**Request ID:** REQ-CONTACT-001  
+**Source:** Контактна форма: issue «Contact form — update validation and notifications»  
 **Date:**
 
 ---
