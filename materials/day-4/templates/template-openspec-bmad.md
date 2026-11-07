@@ -1,101 +1,101 @@
-# Template C — OpenSpec / BMAD modular style
+# Шаблон C. Модульний стиль OpenSpec / BMAD
 
-Use **modules** or **packages** with IDs. Each block should stand alone for traceability.
-
----
-
-## Package metadata
-
-| Field | Value |
-|-------|-------|
-| Package ID | PKG-CONTACT-001 |
-| Capability | Contact form |
-| Status | Discovery |
-| Owner | |
+Використовуйте **модулі** або **пакети** з ID. Кожен блок має бути самодостатнім для простежуваності.
 
 ---
 
-## Module 1 — Mission & outcome (BMAD-style)
+## Метадані пакета
 
-**Mission:**  
-**Desired outcome:**  
-**Success criteria:**
+| Поле | Значення |
+|------|----------|
+| ID пакета | PKG-CONTACT-001 |
+| Можливість (capability) | Форма контактів |
+| Статус | Відкриття |
+| Власник | |
 
-| ID | Criterion | Observable signal |
-|----|-----------|-------------------|
+---
+
+## Модуль 1. Місія й результат (стиль BMAD)
+
+**Місія:**  
+**Бажаний результат:**  
+**Критерії успіху:**
+
+| ID | Критерій | Спостережуваний сигнал |
+|----|----------|------------------------|
 | SC-01 | | |
 
 ---
 
-## Module 2 — Scope boundary (OpenSpec-style)
+## Модуль 2. Межі (стиль OpenSpec)
 
-### In scope
-| ID | Item |
-|----|------|
+### У межах
+| ID | Пункт |
+|----|-------|
 | IN-01 | |
 
-### Exclusions
-| ID | Exclusion | Reason |
-|----|-----------|--------|
+### Виключення
+| ID | Виключення | Причина |
+|----|------------|---------|
 | OUT-01 | | |
 
 ---
 
-## Module 3 — Actors & workflow
+## Модуль 3. Актори й потік
 
-| Actor | Role |
+| Актор | Роль |
 |-------|------|
 | | |
 
 ```mermaid
 sequenceDiagram
-  participant User
-  participant Portal
-  participant Email
-  User->>Portal: Submit contact form
-  Portal->>Email: Send notification
-  Email-->>Portal: Sent / failed
-  Portal-->>User: Confirmation
+  participant User as Відвідувач
+  participant Portal as Сайт
+  participant Email as Пошта
+  User->>Portal: Надсилає форму контактів
+  Portal->>Email: Надсилає сповіщення
+  Email-->>Portal: Надіслано / помилка
+  Portal-->>User: Підтвердження
 ```
 
 ---
 
-## Module 4 — Business rules (testable)
+## Модуль 4. Бізнес-правила (перевірювані)
 
-| ID | When | Then | Else |
-|----|------|------|------|
+| ID | Коли | Тоді | Інакше |
+|----|------|------|--------|
 | RULE-01 | | | |
 | RULE-02 | | | |
 
 ---
 
-## Module 5 — Constraints & dependencies
+## Модуль 5. Обмеження й залежності
 
-| ID | Type | Description |
-|----|------|-------------|
+| ID | Тип | Опис |
+|----|-----|------|
 | DEP-01 | | |
-| CON-01 | Legal / policy | |
+| CON-01 | Юридичне / політика | |
 
 ---
 
-## Module 6 — Assumptions & open questions
+## Модуль 6. Припущення й відкриті питання
 
-| ID | Assumption | Validation plan |
-|----|------------|-----------------|
+| ID | Припущення | План перевірки |
+|----|------------|----------------|
 | ASM-01 | | |
 
-| ID | Question | Stakeholder |
-|----|----------|-------------|
+| ID | Питання | Стейкхолдер |
+|----|---------|-------------|
 | Q-01 | | |
 
 ---
 
-## Traceability matrix (starter)
+## Матриця простежуваності (стартова)
 
-| Rule ID | Related AC / story | Test idea |
-|---------|-------------------|-----------|
+| ID правила | Пов'язаний AC / історія | Ідея тесту |
+|------------|-------------------------|------------|
 | RULE-01 | | |
 
 ---
 
-**Reflection:** Which module surfaced **data-retention** or **stakeholder promise** gaps first? Could a designer read Module 3 only and still align?
+**Рефлексія:** Який модуль першим виявив прогалини щодо **зберігання даних** чи **обіцянок стейкхолдерів**? Чи міг би дизайнер прочитати лише Модуль 3 і все одно узгодитися?

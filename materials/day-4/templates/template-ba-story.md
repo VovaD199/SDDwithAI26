@@ -1,53 +1,53 @@
-# Template A — Plain BA story pack
+# Шаблон A. Простий пакет історій аналітика
 
-**Request ID:** REQ-CONTACT-001  
-**Source:** Контактна форма: issue «Contact form — update validation and notifications»  
-**Date:**
+**ID запиту:** REQ-CONTACT-001  
+**Джерело:** форма контактів, issue «Contact form — update validation and notifications»  
+**Дата:**
 
 ---
 
-## Narrative summary
+## Короткий опис
 
-_(2–4 sentences in business language)_
+_(2–4 речення бізнес-мовою)_
 
-## User stories
+## Користувацькі історії
 
-### Story 1
-**As a** …  
-**I want** …  
-**So that** …
+### Історія 1
+**Як** …  
+**Я хочу** …  
+**Щоб** …
 
-**Acceptance criteria (draft):**
+**Критерії приймання (чернетка):**
 - [ ]
 - [ ]
 
-### Story 2
-**As a** …  
-**I want** …  
-**So that** …
+### Історія 2
+**Як** …  
+**Я хочу** …  
+**Щоб** …
 
-## Assumptions
-
-- 
-
-## Out of scope (informal)
+## Припущення
 
 - 
 
-## Open questions
+## Поза межами (неформально)
 
-| # | Question | Owner | Needed by |
-|---|----------|-------|-----------|
+- 
+
+## Відкриті питання
+
+| № | Питання | Власник | Потрібно до |
+|---|---------|---------|-------------|
 | 1 | | | |
 
-## Dependencies
+## Залежності
 
 - 
 
-## Notes / risks
+## Нотатки / ризики
 
 - 
 
 ---
 
-**Reflection (fill after draft):** What did this format let you **hide**? What was easy to write but hard to **trace**?
+**Рефлексія (заповніть після чернетки):** Що цей формат дозволив вам **приховати**? Що було легко написати, але важко **простежити**?

@@ -1,156 +1,156 @@
-# MVP / PoC slice template (BA-owned)
+# Шаблон PoC/MVP-зрізу (власник: аналітик)
 
-Use when the squad needs a **time-boxed validation** before full delivery — not a replacement for the full refinement template.
+Використовуйте, коли команді потрібна **валідація в обмежений час** перед повною поставкою. Це не заміна повного шаблону специфікації.
 
-Copy per initiative. Link to parent feature: `FEAT-____` in `ba-refinement-template.md`.
-
----
-
-## Header
-
-| Field | Value |
-|-------|-------|
-| Slice ID | POC-____ |
-| Parent feature | FEAT-____ |
-| Type | PoC / MVP / Spike |
-| Owner (BA) | |
-| Tech partner | |
-| Target window | e.g. 2 weeks |
-| Status | Draft / Approved / Running / Done |
+Копіюйте на кожну ініціативу. Прив'яжіть до батьківської фічі: `FEAT-____` у `ba-refinement-template.md`.
 
 ---
 
-## 1. Hypothesis
+## Заголовок
 
-**We believe** …  
-**For** … (segment / actor)  
-**Will achieve** … (observable outcome)  
-**We will know we are right when** … (signal)
-
-| ID | Hypothesis element | Testable? |
-|----|-------------------|-----------|
-| H-01 | | Y / N |
-
-**Good enough:** One sentence a stakeholder can repeat without reading the full spec.
+| Поле | Значення |
+|------|----------|
+| ID зрізу | POC-____ |
+| Батьківська фіча | FEAT-____ |
+| Тип | PoC / MVP / Spike |
+| Власник (аналітик) | |
+| Технічний партнер | |
+| Цільове вікно | напр. 2 тижні |
+| Статус | Чернетка / Затверджено / Виконується / Завершено |
 
 ---
 
-## 2. Smallest testable slice
+## 1. Гіпотеза
 
-What is the **minimum** we can build or simulate to learn something — not the full feature?
+**Ми вважаємо, що** …  
+**Для** … (сегмент / актор)  
+**Досягне** … (спостережуваний результат)  
+**Ми зрозуміємо, що маємо рацію, коли** … (сигнал)
 
-| ID | In slice | Out of slice (defer) |
-|----|----------|----------------------|
+| ID | Елемент гіпотези | Перевірюваний? |
+|----|------------------|----------------|
+| H-01 | | Так / Ні |
+
+**Достатньо добре:** одне речення, яке стейкхолдер може повторити, не читаючи всю специфікацію.
+
+---
+
+## 2. Найменший перевірюваний зріз
+
+Який **мінімум** ми можемо зібрати або змоделювати, щоб чомусь навчитися (а не повну фічу)?
+
+| ID | У зрізі | Поза зрізом (відкласти) |
+|----|---------|-------------------------|
 | SLICE-01 | | |
 | SLICE-02 | | |
 
-**Constraints for slice size:**
+**Обмеження розміру зрізу:**
 
-- [ ] Fits agreed calendar box (e.g. ≤ 2 weeks)
-- [ ] No production commitments unless listed in §6
-- [ ] Fake / manual steps documented if used
-
----
-
-## 3. MVP vs PoC intent
-
-| Dimension | PoC (learn) | MVP (deliver minimum value) |
-|-----------|-------------|----------------------------|
-| Primary goal | Validate assumption | Ship usable value |
-| Audience | Internal + friendly pilots | Paying / production users |
-| Quality bar | Good enough to observe signal | Good enough to support & measure |
-| Success | Learn / kill / pivot | Retain / convert / operate |
-
-**This initiative is:** ☐ PoC  ☐ MVP  ☐ Hybrid (explain below)
-
-**Hybrid note:**
+- [ ] Вкладається в узгоджений календарний проміжок (напр. ≤ 2 тижні)
+- [ ] Немає зобов'язань для продакшену, якщо їх не вказано в §6
+- [ ] Фальшиві / ручні кроки задокументовано, якщо вони є
 
 ---
 
-## 4. Scope for the slice
+## 3. Намір: MVP чи PoC
 
-### In scope (slice only)
+| Вимір | PoC (навчитися) | MVP (мінімальна цінність) |
+|-------|-----------------|---------------------------|
+| Основна мета | Перевірити припущення | Випустити корисну цінність |
+| Аудиторія | Внутрішня + дружні пілоти | Реальні користувачі |
+| Планка якості | Достатньо, щоб побачити сигнал | Достатньо, щоб підтримувати й вимірювати |
+| Успіх | Дізналися / зупинили / змінили курс | Утримання / конверсія / експлуатація |
 
-| ID | Item | Why in slice |
-|----|------|--------------|
+**Ця ініціатива:** ☐ PoC  ☐ MVP  ☐ Гібрид (поясніть нижче)
+
+**Нотатка про гібрид:**
+
+---
+
+## 4. Межі зрізу
+
+### У межах (лише зріз)
+
+| ID | Пункт | Чому у зрізі |
+|----|-------|--------------|
 | IN-P-01 | | |
 
-### Explicit exclusions
+### Явні виключення
 
-| ID | Exclusion | Risk if ignored |
-|----|-----------|-----------------|
+| ID | Виключення | Ризик, якщо проігнорувати |
+|----|------------|---------------------------|
 | OUT-P-01 | | |
 
 ---
 
-## 5. Rules & constraints (slice-level)
+## 5. Правила й обмеження (рівня зрізу)
 
-| ID | Rule / constraint | Source |
-|----|-------------------|--------|
+| ID | Правило / обмеження | Джерело |
+|----|---------------------|---------|
 | RULE-P-01 | | |
-| CON-P-01 | Legal / security / data | |
+| CON-P-01 | Юридичне / безпека / дані | |
 
 ---
 
-## 6. Success signals — PoC vs production
+## 6. Сигнали успіху: PoC проти продакшену
 
-| ID | Signal | PoC threshold | Production threshold | How measured |
-|----|--------|---------------|----------------------|--------------|
+| ID | Сигнал | Поріг PoC | Поріг продакшену | Як вимірюємо |
+|----|--------|-----------|------------------|--------------|
 | SIG-P-01 | | | | |
 | SIG-P-02 | | | | |
 
-**Good enough for PoC:** At least one **quantitative** and one **qualitative** signal with owner and date.
+**Достатньо для PoC:** принаймні один **кількісний** і один **якісний** сигнал із власником і датою.
 
 ---
 
-## 7. Dependencies & enablers
+## 7. Залежності та умови
 
-| ID | Need | Owner | Ready by |
-|----|------|-------|----------|
-| DEP-P-01 | Test accounts / data | | |
-| DEP-P-02 | Legal / privacy sign-off | | |
+| ID | Потреба | Власник | Готово до |
+|----|---------|---------|-----------|
+| DEP-P-01 | Тестові облікові записи / дані | | |
+| DEP-P-02 | Погодження юридичне / з приватності | | |
 
 ---
 
-## 8. Open questions (slice blockers only)
+## 8. Відкриті питання (лише блокери зрізу)
 
-| ID | Question | Blocks | Owner | Due |
-|----|----------|--------|-------|-----|
+| ID | Питання | Що блокує | Власник | Термін |
+|----|---------|-----------|---------|--------|
 | Q-P-01 | | | | |
 
 ---
 
-## 9. Handoff to delivery
+## 9. Передача в поставку
 
-| Artifact | Link / location |
-|----------|-----------------|
-| Full structured spec | `ba-refinement-template.md` copy |
-| PoC/MVP slice | This file |
-| Backlog items | |
-| Demo / readout date | |
+| Артефакт | Посилання / місце |
+|----------|-------------------|
+| Повна структурована специфікація | копія `ba-refinement-template.md` |
+| PoC/MVP-зріз | цей файл |
+| Елементи беклогу | |
+| Демо / дата звіту | |
 
 ---
 
-## Slice checklist (before kickoff)
+## Чекліст зрізу (перед стартом)
 
-- [ ] Hypothesis is falsifiable
-- [ ] Slice IN/OUT reviewed with engineering
-- [ ] PoC vs MVP intent agreed with sponsor
-- [ ] Success signals have owners and dates
-- [ ] Production commitments (if any) explicit in §6
-- [ ] Parent spec RULE/OUT IDs referenced below
+- [ ] Гіпотеза спростовна
+- [ ] IN/OUT зрізу переглянуто з інженерією
+- [ ] Намір PoC чи MVP узгоджено зі спонсором
+- [ ] Сигнали успіху мають власників і дати
+- [ ] Зобов'язання для продакшену (якщо є) явно вказані в §6
+- [ ] Нижче вказано ID RULE/OUT батьківської специфікації
 
-## Traceability to parent spec
+## Простежуваність до батьківської специфікації
 
-| Parent ID | How slice uses it |
-|-----------|-------------------|
+| ID батьківського елемента | Як його використовує зріз |
+|---------------------------|---------------------------|
 | RULE-01 | |
 | OUT-02 | |
 
 ---
 
-## Anti-patterns
+## Анти-патерни
 
-- PoC scope creep disguised as "just one more story"
-- MVP without support / ops plan when real users are in scope
-- Success signals that only measure "we shipped code"
+- Розповзання обсягу PoC під виглядом «ще однієї історії»
+- MVP без плану підтримки / експлуатації, коли в обсязі реальні користувачі
+- Сигнали успіху, що вимірюють лише «ми випустили код»

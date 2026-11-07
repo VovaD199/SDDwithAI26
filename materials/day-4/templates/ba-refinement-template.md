@@ -1,55 +1,55 @@
-# BA refinement template
+# Шаблон специфікації аналітика (refinement)
 
-Copy this file per feature/epic. Keep IDs stable across Jira/ADO/wiki links.
-
----
-
-## Header
-
-| Field | Value |
-|-------|-------|
-| Feature ID | FEAT-____ |
-| Title | |
-| Author | |
-| Status | Discovery / Refining / Ready |
-| Stakeholders | |
-| Last updated | |
+Копіюйте цей файл на кожну фічу/епік. Тримайте ID стабільними в Jira/ADO/wiki-посиланнях.
 
 ---
 
-## 1. Problem statement
+## Заголовок
 
-**Who** is affected?  
-**What** pain or opportunity?  
-**Why now** (trigger, metric, risk)?
-
-**Desired outcome (1 sentence):**
+| Поле | Значення |
+|------|----------|
+| ID фічі | FEAT-____ |
+| Назва | |
+| Автор | |
+| Статус | Відкриття / Уточнення / Готово |
+| Стейкхолдери | |
+| Останнє оновлення | |
 
 ---
 
-## 2. Scope
+## 1. Постановка проблеми
 
-### In scope
-| ID | Item | Notes |
-|----|------|-------|
+**Кого** це стосується?  
+**Який** біль чи можливість?  
+**Чому зараз** (тригер, метрика, ризик)?
+
+**Бажаний результат (одне речення):**
+
+---
+
+## 2. Межі
+
+### У межах
+| ID | Пункт | Нотатки |
+|----|-------|---------|
 | IN-01 | | |
 
-### Exclusions
-| ID | Exclusion | Reason |
-|----|-----------|--------|
+### Виключення
+| ID | Виключення | Причина |
+|----|------------|---------|
 | OUT-01 | | |
 
-**Good enough for refinement:** Every Must-have requirement maps to an IN item or new IN row.
+**Достатньо для refinement:** кожна вимога Must-have відповідає пункту IN або новому рядку IN.
 
 ---
 
-## 3. Actors & workflow
+## 3. Актори й потік
 
-| Actor | Description |
-|-------|-------------|
+| Актор | Опис |
+|-------|------|
 | | |
 
-**Primary flow (happy path):**
+**Основний потік (щасливий шлях):**
 
 ```text
 1.
@@ -57,118 +57,118 @@ Copy this file per feature/epic. Keep IDs stable across Jira/ADO/wiki links.
 3.
 ```
 
-**Alternate / exception flows:**
+**Альтернативні / винятки:**
 
 - 
 
 ---
 
-## 4. Business rules
+## 4. Бізнес-правила
 
-| ID | When (condition) | Then ( outcome ) | Else | Source |
-|----|------------------|--------------------|------|--------|
-| RULE-01 | | | | Policy / Legal / SME |
+| ID | Коли (умова) | Тоді (результат) | Інакше | Джерело |
+|----|--------------|------------------|--------|---------|
+| RULE-01 | | | | Політика / Юридичне / Експерт |
 
-**Good enough for refinement:** Rules are testable — no "handle appropriately."
-
----
-
-## 5. Constraints & dependencies
-
-| ID | Type | Description | Impact if unresolved |
-|----|------|-------------|---------------------|
-| CON-01 | Legal / Tech / Data / Vendor | | |
-| DEP-01 | Upstream system / team | | |
+**Достатньо для refinement:** правила перевірювані, без формулювань на кшталт «обробити належним чином».
 
 ---
 
-## 6. Assumptions
+## 5. Обмеження й залежності
 
-| ID | Assumption | Validate by | Owner |
-|----|------------|-------------|-------|
+| ID | Тип | Опис | Наслідок, якщо не розв'язано |
+|----|-----|------|------------------------------|
+| CON-01 | Юридичне / Технічне / Дані / Постачальник | | |
+| DEP-01 | Зовнішня система / команда | | |
+
+---
+
+## 6. Припущення
+
+| ID | Припущення | Як перевірити | Власник |
+|----|------------|---------------|---------|
 | ASM-01 | | | |
 
 ---
 
-## 7. Open questions
+## 7. Відкриті питання
 
-| ID | Question | Blocks | Owner | Due |
-|----|----------|--------|-------|-----|
+| ID | Питання | Що блокує | Власник | Термін |
+|----|---------|-----------|---------|--------|
 | Q-01 | | | | |
 
-**Good enough for refinement:** No open **Blocker** questions without a dated decision or spike.
+**Достатньо для refinement:** жодного відкритого **блокера** без датованого рішення або spike.
 
 ---
 
-## 8. Acceptance signals
+## 8. Сигнали приймання
 
-| ID | Signal | How verified |
-|----|--------|--------------|
-| AC-01 | Observable behavior or metric | Demo / analytics / audit |
+| ID | Сигнал | Як перевіряємо |
+|----|--------|----------------|
+| AC-01 | Спостережувана поведінка або метрика | Демо / аналітика / аудит |
 
 ---
 
-## 9. Traceability (starter)
+## 9. Простежуваність (стартова)
 
-| Rule / scope ID | Story / ticket | Test note |
-|-----------------|----------------|-----------|
+| ID правила / меж | Історія / тікет | Нотатка про тест |
+|------------------|-----------------|------------------|
 | RULE-01 | | |
 
 ---
 
-## 10. MVP / PoC planning (optional — before full build)
+## 10. Планування MVP / PoC (необов'язково, перед повною розробкою)
 
-Use when the squad needs a **validated slice** before committing to full delivery. Detail in `mvp-poc-slice-template.md`.
+Використовуйте, коли команді потрібен **перевірений зріз** до зобов'язань на повну поставку. Деталі в `mvp-poc-slice-template.md`.
 
-| Field | Value |
-|-------|-------|
-| Slice type | PoC / MVP / Spike |
-| Hypothesis (1 sentence) | |
-| Smallest testable slice | |
-| Target window | e.g. 2 weeks |
+| Поле | Значення |
+|------|----------|
+| Тип зрізу | PoC / MVP / Spike |
+| Гіпотеза (1 речення) | |
+| Найменший перевірюваний зріз | |
+| Цільове вікно | напр. 2 тижні |
 
-### Scope for slice only
+### Межі лише для зрізу
 
-| ID | In slice | Deferred to full feature |
-|----|----------|--------------------------|
+| ID | У зрізі | Відкладено на повну фічу |
+|----|---------|--------------------------|
 | SLICE-01 | | |
 
-### Success signals — PoC vs production
+### Сигнали успіху: PoC проти продакшену
 
-| ID | Signal | PoC threshold | Production threshold |
-|----|--------|---------------|----------------------|
+| ID | Сигнал | Поріг PoC | Поріг продакшену |
+|----|--------|-----------|------------------|
 | SIG-01 | | | |
 
-**Good enough for refinement:** PoC/MVP slice has **explicit OUT** rows; hypothesis is falsifiable; production commitments (if any) named in SIG column.
+**Достатньо для refinement:** у зрізу PoC/MVP є **явні рядки OUT**; гіпотеза спростовна; зобов'язання для продакшену (якщо є) названі у стовпці SIG.
 
 ---
 
-## Domain extensions (customize in Exercise 2)
+## Доменні розширення (налаштуйте у Вправі 2)
 
-### Compliance / privacy
-| ID | Requirement |
-|----|-------------|
+### Приватність / персональні дані
+| ID | Вимога |
+|----|--------|
 | | |
 
-### Pricing / commercial
-| ID | Requirement |
-|----|-------------|
+### Зберігання й сповіщення (напр. вкладення, листи)
+| ID | Вимога |
+|----|--------|
 | | |
 
 ---
 
-## Refinement checklist
+## Чекліст refinement
 
-- [ ] Problem & outcome agreed with requestor
-- [ ] Exclusions reviewed by impacted teams
-- [ ] Rules have sources or flagged as draft
-- [ ] Acceptance signals demo-able
-- [ ] Open blockers owned and dated
+- [ ] Проблему й результат узгоджено із замовником
+- [ ] Виключення переглянули зачеплені команди
+- [ ] Правила мають джерела або позначені як чернетка
+- [ ] Сигнали приймання можна показати на демо
+- [ ] Відкриті блокери мають власників і дати
 
 ---
 
-## Anti-patterns (delete before sharing if not needed)
+## Анти-патерни (видаліть перед поширенням, якщо не потрібні)
 
-- Do not put database schema here unless constraint-driven
-- Do not write UI pixel specs — link design when ready
-- Do not close open questions by guessing — mark ASM-## instead
+- Не вставляйте сюди схему БД, якщо це не обмеження
+- Не пишіть піксельних специфікацій UI: посилайтеся на дизайн, коли він готовий
+- Не закривайте відкриті питання здогадками: позначайте їх як ASM-##

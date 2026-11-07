@@ -1,83 +1,83 @@
-# Template B — GitHub Spec Kit style
+# Шаблон B. Стиль GitHub Spec Kit
 
-Inspired by Spec Kit flow: **product brief → constitution → spec**. Adapt names to your repo conventions.
+За мотивами процесу Spec Kit: **product brief → constitution → специфікація**. Назви адаптуйте до домовленостей вашого репозиторію.
 
 ---
 
 ## Product brief
 
-### Problem
-Who is affected? What pain? Why now?
+### Проблема
+Кого це стосується? Який біль? Чому зараз?
 
-### Target users
+### Цільові користувачі
 - 
 
-### Success metrics
-| Metric | Target | Measurement |
-|--------|--------|-------------|
+### Метрики успіху
+| Метрика | Ціль | Вимірювання |
+|---------|------|-------------|
 | | | |
 
-### Non-goals
+### Не цілі (non-goals)
 - 
 
 ---
 
-## Constitution (principles & constraints)
+## Constitution (принципи й обмеження)
 
-| ID | Principle / constraint | Rationale |
-|----|------------------------|-----------|
+| ID | Принцип / обмеження | Обґрунтування |
+|----|---------------------|---------------|
 | C-01 | | |
 | C-02 | | |
 
 ---
 
-## Specification
+## Специфікація
 
-### Functional requirements
+### Функціональні вимоги
 
-| ID | Requirement | Priority | Acceptance signal |
-|----|-------------|----------|-------------------|
+| ID | Вимога | Пріоритет | Сигнал приймання |
+|----|--------|-----------|------------------|
 | FR-01 | | Must | |
 | FR-02 | | Should | |
 
-### Business rules
+### Бізнес-правила
 
-| ID | Rule | Exception |
-|----|------|-----------|
+| ID | Правило | Виняток |
+|----|---------|---------|
 | BR-01 | | |
 | BR-02 | | |
 
-### Scope
+### Межі
 
-**In scope**
+**У межах**
 - 
 
-**Out of scope**
+**Поза межами**
 - 
 
-### Actors & workflows
+### Актори й потоки
 
 ```text
-(Actor) → (action) → (system) → ( outcome )
+(Актор) → (дія) → (система) → (результат)
 ```
 
-### Dependencies
+### Залежності
 - 
 
-### Open questions
-| ID | Question | Blocks |
-|----|----------|--------|
+### Відкриті питання
+| ID | Питання | Що блокує |
+|----|---------|-----------|
 | Q-01 | | |
 
 ---
 
-## Handoff checklist
+## Чекліст передачі
 
-- [ ] Problem & success metrics agreed with stakeholder
-- [ ] Out-of-scope reviewed by Product / Support
-- [ ] Open questions assigned owners
-- [ ] Ready for refinement / technical spike
+- [ ] Проблему й метрики успіху погоджено зі стейкхолдером
+- [ ] Поза-межами переглянуто з Product / Support
+- [ ] Відкриті питання мають власників
+- [ ] Готово до refinement / технічного дослідження (spike)
 
 ---
 
-**Reflection:** Which sections felt **GitHub-native** vs **pure BA**? What would you put in a PR description?
+**Рефлексія:** Які розділи відчулися **GitHub-нативними**, а які суто **аналітичними**? Що ви б додали в опис PR?
