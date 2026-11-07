@@ -160,7 +160,7 @@ MCP це стандартний спосіб, яким Cursor спілкуєть
 |---|---|
 | Token name | `cursor-mcp-course` |
 | Expiration | 30 днів (за замовчуванням) |
-| Repository access | **Only select repositories**, лише ваш `lf-client-<ваше-імʼя>` |
+| Repository access | **Only select repositories**, лише ваш `SDDwithAI26-<ваше-імʼя>` |
 | Permissions: Contents | Read-only |
 | Permissions: Issues | Read and write |
 | Permissions: Metadata | Read-only |
@@ -201,7 +201,7 @@ MCP це стандартний спосіб, яким Cursor спілкуєть
 **У ЧАТ CURSOR:**
 
 ```text
-Використовуючи GitHub MCP, покажи відкриті issue у моєму репозиторії lf-client-<ваше-імʼя>.
+Використовуючи GitHub MCP, покажи відкриті issue у моєму репозиторії SDDwithAI26-<ваше-імʼя>.
 ```
 
 **Правила безпечної роботи з MCP:**
@@ -218,7 +218,7 @@ MCP це стандартний спосіб, яким Cursor спілкуєть
 **У ЧАТ CURSOR:**
 
 ```text
-Використовуючи GitHub MCP, створи issue у моєму репозиторії lf-client-<ваше-імʼя>:
+Використовуючи GitHub MCP, створи issue у моєму репозиторії SDDwithAI26-<ваше-імʼя>:
 
 Заголовок: Contact form — update validation and notifications
 Опис:
@@ -238,7 +238,7 @@ to us. Notifications need to reflect the new field.
 **У ЧАТ CURSOR** (замініть `<номер>`):
 
 ```text
-Отримай текст issue #<номер> з мого репозиторію lf-client-<ваше-імʼя> через GitHub MCP.
+Отримай текст issue #<номер> з мого репозиторію SDDwithAI26-<ваше-імʼя> через GitHub MCP.
 
 Потім порівняй його з поточною реалізацією. Релевантні файли:
 - @app/api/contact/route.ts

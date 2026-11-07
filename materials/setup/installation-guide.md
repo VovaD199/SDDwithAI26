@@ -72,7 +72,7 @@ git config --global user.email "you@example.com"
 | `git` або `node` не знайдено після встановлення | Закрийте й відкрийте PowerShell заново; перезавантажте комп'ютер |
 | `npm install` скаржиться на політику виконання скриптів (`running scripts is disabled`) | Виконайте в PowerShell: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` (дозволяє локальні скрипти для вашого користувача) |
 | Немає прав адміністратора | Напишіть ментору до заняття; використайте портативні версії або запасний шлях (Download ZIP + Codespaces, якщо дозволено) |
-| Довгі шляхи | Клонуйте проєкт ближче до кореня диска, наприклад `C:\Projects` |
+| Помилка про довгі шляхи під час `git clone` або `npm install` | Клонуйте проєкт ближче до кореня диска, наприклад `C:\Projects`, і виконайте один раз `git config --global core.longpaths true` |
 
 ---
 
