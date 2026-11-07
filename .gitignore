@@ -9,3 +9,7 @@ build/
 .claude/settings.local.json
 .DS_Store
 Thumbs.db
+
+# Вихідні матеріали курсу (лише локально)
+sources/
+desktop.ini
