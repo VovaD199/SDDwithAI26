@@ -245,6 +245,8 @@ to us. Notifications need to reflect the new field.
 - @app/lib/utils/validateContactData.ts
 - @app/shared/components/forms/contact-form/ContactForm.tsx
 - @app/services/email/
+- @app/api/collaboration/route.ts
+- @app/shared/components/forms/offer-collaboration-form/
 
 Для кожного твердження в issue скажи:
 1. Чи це вже реалізовано? Де?
@@ -256,6 +258,8 @@ to us. Notifications need to reflect the new field.
 - Телефон зараз необов'язковий: шукайте умову `if (phoneNumber)` і `.optional()`.
 - Вкладення файлів не підтримуються ні формою, ні API, ні сервісом пошти.
 - Сервіс пошти це заглушка: він повертає `{ success: true }`, але листів не надсилає.
+- Форма на сторінці «Контакти» (`OfferCollaborationForm`) надсилає дані на `/api/collaboration`, а **не** на `/api/contact`; `/api/contact` не викликає жодна сторінка. Те саме поле форми (`ContactForm`) використовує й `GetNotesModal`, але там форма взагалі не звертається до API.
+- Сервіс пошти (`emailService`) ніде в застосунку не викликається, тож лист-сповіщення зараз не формується.
 
 ### Що є в коді, але немає у вимозі
 
