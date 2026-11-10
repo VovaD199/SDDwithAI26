@@ -10,6 +10,7 @@
 | Node.js 22 або новіша | Запуск навчального застосунку | День 1 |
 | Cursor | Редактор з AI-агентом | День 1 |
 | Обліковий запис GitHub | Репозиторій, PR | День 1 |
+| Налаштування моделі Cursor | Економія ліміту безкоштовного плану | День 1 (див. `cursor-model-tips.md`) |
 | (опційно) Обліковий запис Figma | Макет і Figma MCP | День 3–4 |
 
 **До курсу:** установіть Git і Node.js та надішліть ментору скріншот результату:
@@ -72,6 +73,7 @@ git config --global user.email "you@example.com"
 | `git` або `node` не знайдено після встановлення | Закрийте й відкрийте PowerShell заново; перезавантажте комп'ютер |
 | `npm install` скаржиться на політику виконання скриптів (`running scripts is disabled`) | Виконайте в PowerShell: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` (дозволяє локальні скрипти для вашого користувача) |
 | Немає прав адміністратора | Напишіть ментору до заняття; використайте портативні версії або запасний шлях (Download ZIP + Codespaces, якщо дозволено) |
+| `SSL certificate problem` під час `git clone` / `git push` | Виконайте один раз `git config --global http.sslBackend schannel` (Git використає сховище сертифікатів Windows; допомагає за корпоративного проксі чи підміни сертифікатів) |
 | Помилка про довгі шляхи під час `git clone` або `npm install` | Клонуйте проєкт ближче до кореня диска, наприклад `C:\Projects`, і виконайте один раз `git config --global core.longpaths true` |
 
 ---
