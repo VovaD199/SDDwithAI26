@@ -121,7 +121,7 @@ def fix_lists(body):
     return '\n'.join(out)
 
 
-def transform(text, teacher):
+def transform(text, teacher, callouts=True):
     blocks = [(k, fix_lists(b) if k == 'para' else b) for k, b in split_blocks(text)]
     out = []
     i = 0
@@ -155,7 +155,7 @@ def transform(text, teacher):
                 if stripped.startswith(prefix):
                     cls = c
                     break
-            if cls:
+            if cls and callouts:
                 group = [body]
                 if i + 1 < len(blocks):
                     nkind, nbody = blocks[i + 1]
@@ -218,9 +218,18 @@ def main():
     ap.add_argument('files', nargs='+')
     ap.add_argument('--teacher', action='store_true')
     ap.add_argument('--pdf', action='store_true')
+    ap.add_argument('--strip-md', action='store_true',
+                    help='зберегти чистий Markdown для учасників (без розділів викладача й позначки ЧЕРНЕТКА), без HTML/PDF')
     ap.add_argument('--out', default='build')
     args = ap.parse_args()
     os.makedirs(args.out, exist_ok=True)
+    if args.strip_md:
+        for f in args.files:
+            text = open(f, encoding='utf8').read()
+            out_md = os.path.join(args.out, os.path.basename(f))
+            open(out_md, 'w', encoding='utf8', newline='\n').write(transform(text, False, callouts=False))
+            print('MD:', out_md)
+        return
     for f in args.files:
         name = os.path.splitext(os.path.basename(f))[0] + ('-teacher' if args.teacher else '')
         html_path = os.path.join(args.out, name + '.html')
