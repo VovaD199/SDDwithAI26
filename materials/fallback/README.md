@@ -36,6 +36,8 @@
 | 3 | `day-3/figma-analysis-example.md` | Аналіз макета: спостереження й питання (з вимоги, не з реального Figma) |
 | 4 | `day-4/spec-contact-form.md` | Структурована специфікація з ID |
 | 4 | `day-4/slice-contact-form.md` | PoC-зріз зі специфікації |
+| 4 | `day-4/ai-check-notes-example.md` | Нотатки AI-перевірки (приклад структури) |
+| 4 | `day-4/handoff-example.md` | Пакет передачі (розділи про макет умовні) |
 
 ## Звідки приклади
 
