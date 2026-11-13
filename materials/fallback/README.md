@@ -32,6 +32,7 @@
 | 2 | `day-2/contact-form-feature.md` | Документ фічі: правила, AC, питання |
 | 2 | `day-2/issue-texts.md` | Тексти для issue (тіло й коментарі) для ручної вставки |
 | 3 | `day-3/poc-summary-example.md` | Підсумок PoC із чеклістом (за реальними експериментами) |
+| 3 | `day-3/poc-notes-example.md` | Нотатки PoC: що побачив у застосунку (за справжніми перевірками) |
 | 3 | `day-3/figma-analysis-example.md` | Аналіз макета: спостереження й питання (з вимоги, не з реального Figma) |
 | 4 | `day-4/spec-contact-form.md` | Структурована специфікація з ID |
 | 4 | `day-4/slice-contact-form.md` | PoC-зріз зі специфікації |
