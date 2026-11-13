@@ -49,11 +49,14 @@ PoC (proof of concept) для BA це **одноразовий експерим�
 ```bash
 git checkout main
 git pull
-git checkout -b poc/day-3
+git branch poc/day-3
+git checkout poc/day-3
 git branch --show-current
 ```
 
-**ПЕРЕВІРТЕ:** термінал показує `poc/day-3`. Якщо показує `main`, повторіть команду.
+`git branch poc/day-3` створює гілку, а `git checkout poc/day-3` переходить на неї. (Команда `git branch` без назви показує список гілок, поточна позначена зірочкою.)
+
+**ПЕРЕВІРТЕ:** термінал показує `poc/day-3`. Якщо показує `main`, повторіть `git checkout poc/day-3`.
 
 Переконайтеся, що застосунок працює (`npm run dev`, http://localhost:3000/en).
 
@@ -148,6 +151,9 @@ git branch --show-current
 **Сценарій.** Стейкхолдери хочуть перевірити на демо, чи звучить краще підпис «Become a patron» замість «Support the Foundation».
 
 ```text
+Контекст: стейкхолдери хочуть перевірити на демо, чи звучить краще підпис
+«Become a patron» замість «Support the Foundation».
+
 Знайди поточний підпис кнопки заклику до дії на сторінці /support-us.
 Покажи файл, рядок і поточне значення.
 Потім покажи diff, який змінює його на «Become a patron».
@@ -172,6 +178,8 @@ Diff це авторитетний запис того, що змінилося:
 git diff
 git diff --stat
 ```
+
+Якщо після `git diff` термінал перейшов у режим перегляду (унизу вікна двокрапка `:` або `(END)`), це нормально: довгий вивід показується по сторінках. **Щоб вийти, натисніть `q`.** Рухатися по тексту можна стрілками, `Space` гортає далі. Щоб Git показував усе одразу без режиму перегляду, використайте `git --no-pager diff`.
 
 **У ЧАТ CURSOR:**
 
@@ -254,7 +262,8 @@ git commit -m "docs: add PoC summary (day 3)"
 
 # 2) нова чиста гілка від main, взяти звідти лише документ
 git checkout main
-git checkout -b day-3
+git branch day-3
+git checkout day-3
 git checkout poc/day-3 -- docs/poc-contact-about-support-<дата>.md
 git add docs/poc-contact-about-support-<дата>.md
 git commit -m "docs: add PoC summary (day 3)"
@@ -308,11 +317,13 @@ git branch -D poc/day-3
 
 ## B3. Підготовка
 
-Потрібен обліковий запис Figma з доступом до Figma Make (вкладка Make або меню AI). Якщо Figma Make недоступний, ментор покаже спільний файл, а ви виконаєте аналіз частини B4–B5 на ньому.
+Потрібен обліковий запис Figma з доступом до Figma Make. Відкрити Figma Make можна за адресою https://www.figma.com/make/ (увійдіть у свій обліковий запис Figma; нова сесія Make створюється там же).
+
+> **Ліміти:** Figma Make витрачає AI-кредити Figma, а безкоштовний план має місячний і денний ліміт. Скільки саме й що робити, коли ліміт вичерпано, див. блок «Ліміти Figma» на початку `materials/day-4/figma-mcp-setup.md`. Не витрачайте кредити на зайві експерименти: генеруйте за промптом нижче й уточнюйте мінімум. Якщо Figma Make недоступний, ментор покаже спільний файл, а ви виконаєте аналіз частини B4–B5 на ньому.
 
 ## B4. Генерація макета
 
-Відкрийте Figma Make й вставте промпт **точно як написано** (рівень деталізації навмисний).
+Відкрийте Figma Make (https://www.figma.com/make/) й вставте промпт **точно як написано** (рівень деталізації навмисний).
 
 **У FIGMA MAKE:**
 
