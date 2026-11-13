@@ -1,21 +1,22 @@
 /* Оформлення навчальних матеріалів: кольорові блоки за типом. Для друку в PDF і перегляду в браузері. */
 :root {
-  --c-copy: #1d4ed8;      /* КОПІЮЙТЕ: синій */
-  --c-copy-bg: #eff6ff;
+  /* Вісім кольорів з різних частин кольорового кола, щоб блоки не плутались */
+  --c-copy: #2563eb;      /* КОПІЮЙТЕ: синій */
+  --c-copy-bg: #dbeafe;
   --c-chat: #7c3aed;      /* У ЧАТ CURSOR: фіолетовий */
-  --c-chat-bg: #f5f3ff;
-  --c-figma: #be185d;     /* У FIGMA MAKE: малиновий */
-  --c-figma-bg: #fdf2f8;
-  --c-check: #15803d;     /* ПЕРЕВІРТЕ: зелений */
-  --c-check-bg: #f0fdf4;
-  --c-fail: #c2410c;      /* ЯКЩО НЕ ВИЙШЛО: помаранчевий */
-  --c-fail-bg: #fff7ed;
-  --c-safety: #b91c1c;    /* БЕЗПЕКА: червоний */
-  --c-safety-bg: #fef2f2;
-  --c-deliver: #0f766e;   /* Здача, обов'язкове: бірюзовий */
-  --c-deliver-bg: #f0fdfa;
-  --c-hint: #475569;      /* Орієнтир: сірувато-синій */
-  --c-hint-bg: #f1f5f9;
+  --c-chat-bg: #ede9fe;
+  --c-figma: #db2777;     /* У FIGMA MAKE: рожевий (малиновий) */
+  --c-figma-bg: #fce7f3;
+  --c-check: #16a34a;     /* ПЕРЕВІРТЕ: зелений */
+  --c-check-bg: #dcfce7;
+  --c-fail: #ea580c;      /* ЯКЩО НЕ ВИЙШЛО: помаранчевий */
+  --c-fail-bg: #ffedd5;
+  --c-safety: #dc2626;    /* БЕЗПЕКА: червоний */
+  --c-safety-bg: #fee2e2;
+  --c-deliver: #ca8a04;   /* ОБОВ'ЯЗКОВЕ / здача: золотий */
+  --c-deliver-bg: #fef9c3;
+  --c-hint: #0891b2;      /* ОРІЄНТИР: бірюзово-блакитний */
+  --c-hint-bg: #cffafe;
   --c-teacher: #6b7280;   /* Для викладача: сірий */
   --c-teacher-bg: #f3f4f6;
 }
@@ -40,7 +41,7 @@ pre code { background: none; padding: 0; }
 table { border-collapse: collapse; margin: 10px 0; width: 100%; font-size: 10pt; }
 th, td { border: 1px solid #cbd5e1; padding: 5px 8px; vertical-align: top; }
 th { background: #e2e8f0; text-align: left; }
-blockquote { margin: 12px 0; padding: 8px 14px; border-left: 4px solid #eab308; background: #fefce8; }
+blockquote { margin: 12px 0; padding: 8px 14px; border-left: 4px solid #9ca3af; background: #f9fafb; color: #374151; }
 blockquote p { margin: 4px 0; }
 a { color: #1d4ed8; }
 hr { border: 0; border-top: 1px solid #d1d5db; margin: 24px 0; }
@@ -63,8 +64,9 @@ hr { border: 0; border-top: 1px solid #d1d5db; margin: 24px 0; }
 .c-safety  { border-color: var(--c-safety);  background: var(--c-safety-bg); }
 .c-safety > p:first-child strong { color: var(--c-safety); }
 .c-deliver { border-color: var(--c-deliver); background: var(--c-deliver-bg); }
-.c-deliver > p:first-child strong { color: var(--c-deliver); }
+.c-deliver > p:first-child strong { color: #854d0e; }
 .c-hint    { border-color: var(--c-hint);    background: var(--c-hint-bg); }
+.c-hint > p:first-child em { color: #0e7490; }
 .c-teacher { border-color: var(--c-teacher); background: var(--c-teacher-bg); color: #374151; }
 
 .legend { display: flex; flex-wrap: wrap; gap: 6px 10px; font-size: 9.5pt; margin: 8px 0 18px; }
@@ -75,3 +77,22 @@ hr { border: 0; border-top: 1px solid #d1d5db; margin: 24px 0; }
   h2, h3 { page-break-after: avoid; }
   pre, table { page-break-inside: avoid; }
 }
+
+/* Таблиця «Як користуватися інструкцією»: кожен рядок свого кольору */
+table.legend-table td:first-child { font-weight: 700; border-left-width: 8px; border-left-style: solid; width: 22%; }
+tr.row-c-copy td    { background: var(--c-copy-bg); }
+tr.row-c-copy td:first-child    { border-left-color: var(--c-copy);    color: var(--c-copy); }
+tr.row-c-chat td    { background: var(--c-chat-bg); }
+tr.row-c-chat td:first-child    { border-left-color: var(--c-chat);    color: var(--c-chat); }
+tr.row-c-figma td   { background: var(--c-figma-bg); }
+tr.row-c-figma td:first-child   { border-left-color: var(--c-figma);   color: var(--c-figma); }
+tr.row-c-check td   { background: var(--c-check-bg); }
+tr.row-c-check td:first-child   { border-left-color: var(--c-check);   color: var(--c-check); }
+tr.row-c-fail td    { background: var(--c-fail-bg); }
+tr.row-c-fail td:first-child    { border-left-color: var(--c-fail);    color: var(--c-fail); }
+tr.row-c-safety td  { background: var(--c-safety-bg); }
+tr.row-c-safety td:first-child  { border-left-color: var(--c-safety);  color: var(--c-safety); }
+tr.row-c-deliver td { background: var(--c-deliver-bg); }
+tr.row-c-deliver td:first-child { border-left-color: var(--c-deliver); color: #854d0e; }
+tr.row-c-hint td    { background: var(--c-hint-bg); }
+tr.row-c-hint td:first-child    { border-left-color: var(--c-hint);    color: #0e7490; }

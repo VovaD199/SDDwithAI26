@@ -29,6 +29,7 @@ MARKERS = [
     ("**ПЕРЕВІРТЕ", 'c-check'),
     ("**ЯКЩО НЕ ВИЙШЛО", 'c-fail'),
     ("**БЕЗПЕКА", 'c-safety'),
+    ("**Здача", 'c-deliver'),
     ("**Обов'язкове", 'c-deliver'),
     ("**Обов’язкове", 'c-deliver'),
     ("*Орієнтир", 'c-hint'),
@@ -36,17 +37,34 @@ MARKERS = [
 
 TEACHER_HEADING = re.compile(r'^(#{1,6})\s+(.*(Для викладача|Критерії перевірки \(ментору\)|Для менторів|Для куратора).*)$')
 
-LEGEND = '''<div class="legend">
-<span style="border-color:var(--c-copy);background:var(--c-copy-bg)">КОПІЮЙТЕ</span>
-<span style="border-color:var(--c-chat);background:var(--c-chat-bg)">У ЧАТ CURSOR</span>
-<span style="border-color:var(--c-figma);background:var(--c-figma-bg)">У FIGMA MAKE</span>
-<span style="border-color:var(--c-check);background:var(--c-check-bg)">ПЕРЕВІРТЕ</span>
-<span style="border-color:var(--c-fail);background:var(--c-fail-bg)">ЯКЩО НЕ ВИЙШЛО</span>
-<span style="border-color:var(--c-safety);background:var(--c-safety-bg)">БЕЗПЕКА</span>
-<span style="border-color:var(--c-deliver);background:var(--c-deliver-bg)">ЗДАЧА</span>
-<span style="border-color:var(--c-hint);background:var(--c-hint-bg)">ОРІЄНТИР</span>
-</div>
-'''
+ROW_CLASSES = {
+    'КОПІЮЙТЕ': 'row-c-copy',
+    'У ЧАТ CURSOR': 'row-c-chat',
+    'У FIGMA MAKE': 'row-c-figma',
+    'ПЕРЕВІРТЕ': 'row-c-check',
+    'ЯКЩО НЕ ВИЙШЛО': 'row-c-fail',
+    'БЕЗПЕКА': 'row-c-safety',
+    "ОБОВ'ЯЗКОВЕ": 'row-c-deliver',
+    'ОБОВ’ЯЗКОВЕ': 'row-c-deliver',
+    'ОРІЄНТИР': 'row-c-hint',
+}
+
+
+def color_legend_table(body):
+    """Фарбує рядки таблиці «Як користуватися інструкцією» за позначкою в першій клітинці."""
+    m = re.search(r'(<h2[^>]*>Як користуватися інструкцією</h2>\s*)<table>(.*?)</table>', body, re.S)
+    if not m:
+        return body
+    table = m.group(2)
+
+    def row(rm):
+        cell = re.search(r'<td[^>]*>(.*?)</td>', rm.group(1), re.S)
+        key = re.sub(r'<[^>]+>', '', cell.group(1)).strip() if cell else ''
+        cls = ROW_CLASSES.get(key)
+        return ('<tr class="%s">' % cls if cls else '<tr>') + rm.group(1) + '</tr>'
+
+    table = re.sub(r'<tr>(.*?)</tr>', row, table, flags=re.S)
+    return body[:m.start()] + m.group(1) + '<table class="legend-table">' + table + '</table>' + body[m.end():]
 
 
 def split_blocks(text):
@@ -161,8 +179,7 @@ def render(md_path, teacher):
     if m:
         title = re.sub(r'<[^>]+>', '', m.group(1))
     css = open(CSS_PATH, encoding='utf8').read()
-    # легенда після першого h1
-    body = re.sub(r'(</h1>)', r'\1\n' + LEGEND.replace('\\', '\\\\'), body, count=1)
+    body = color_legend_table(body)
     return '<!doctype html>\n<html lang="uk"><head><meta charset="utf-8">' \
            '<meta name="viewport" content="width=device-width, initial-scale=1">' \
            '<title>%s</title><style>%s</style></head><body>%s</body></html>' % (html.escape(title), css, body)
