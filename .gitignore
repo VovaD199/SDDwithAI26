@@ -13,3 +13,6 @@ Thumbs.db
 # Вихідні матеріали курсу (лише локально)
 sources/
 desktop.ini
+
+# Збірка матеріалів (HTML/PDF), створюється tools/build_materials.py
+build/
